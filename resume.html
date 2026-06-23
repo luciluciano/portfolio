@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Devadath C</title>
+
+<!-- Consistent Typography & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: #f1f1f1; /* Matching portfolio background */
+    color: #111;
+    min-height: 100vh;
+    padding: 40px 80px;
+}
+
+/* NAVBAR (Mirrors Screenshot 2026-06-23 112138.png) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logo-dot {
+    width: 16px;
+    height: 16px;
+    background: #f0ab00; /* Uses your resume button color as the brand dot */
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 400;
+    color: #666;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #f0ab00;
+}
+
+.nav-separator {
+    color: #ccc;
+}
+
+/* MAIN CONTAINER */
+.resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+}
+
+/* ASYMMETRICAL RESUME ROW */
+.resume-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.resume-row:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* TIMELINE ITEMS LAYER */
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+}
+
+.date {
+    font-size: 15px;
+    color: #555;
+    font-weight: 500;
+    padding-top: 3px;
+}
+
+.details h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.details .subtitle {
+    font-size: 15px;
+    color: #f0ab00;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.details p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.details ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.details ul li {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 900px){
+    body {
+        padding: 40px 30px;
+    }
+    
+    .resume-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .date {
+        padding-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION HEADER -->
+<header>
+    <a href="index.html" class="logo">
+        <div class="logo-dot"></div>
+        Devadath C <span>Portfolio</span>
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <span class="nav-separator">|</span>
+        <a href="resume.html" class="active">Resume</a>
+        <span class="nav-separator">|</span>
+        <a href="project.html">Projects</a>
+        <span class="nav-separator">|</span>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- RESUME CONTENT CONTAINER -->
+<main class="resume-container">
+    
+    <h1 class="page-title">Resume</h1>
+
+    <!-- SECTION: EDUCATION -->
+    <section class="resume-row">
+        <div class="section-title">Education</div>
+        <div class="timeline-items">
+            
+            <div class="timeline-item">
+                <div class="date">Graduated</div>
+                <div class="details">
+                    <h4>B.Sc. Cyber Forensics</h4>
+                    <p>Focused on digital investigation frameworks, network security architecture, data recovery techniques, and legal aspects of computer crime mitigation.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: CERTIFICATIONS -->
+    <section class="resume-row">
+        <div class="section-title">Certifications & Training</div>
+        <div class="timeline-items">
+            
+            <div class="timeline-item">
+                <div class="date">In Progress</div>
+                <div class="details">
+                    <h4>OCSP (Offenso Certified Security Professional)</h4>
+                    <div class="subtitle">Sponsored by The Offenso Hacker Academy</div>
+                    <p>Enrolled in a comprehensive program bridging ethical hacking with deep security fundamentals. The curriculum spans across both offensive methodologies and defensive frameworks to build well-rounded engineering and tactical protection strategies.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PRACTICAL LAB EXPERIENCE -->
+    <section class="resume-row">
+        <div class="section-title">Practical Experience</div>
+        <div class="timeline-items">
+            
+            <div class="timeline-item">
+                <div class="date">Active Labs</div>
+                <div class="details">
+                    <h4>Security Researcher / Penetration Tester</h4>
+                    <div class="subtitle">CodeRed Pentest Lab</div>
+                    <p>Engaging in vulnerability assessments and simulated real-world cyber attacks to sharpen technical defense and offensive capability metrics.</p>
+                    <ul>
+                        <li>Exploiting web application vulnerabilities (OWASP Top 10).</li>
+                        <li>Privilege escalation techniques across Linux and Windows environments.</li>
+                        <li>Analyzing network traffic captures to determine Indicators of Compromise (IoCs).</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>

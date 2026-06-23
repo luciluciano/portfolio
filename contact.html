@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Devadath C</title>
+
+<!-- Modern, Sharp Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: #f1f1f1; /* Matching portfolio canvas background */
+    color: #111;
+    min-height: 100vh;
+    padding: 40px 80px;
+}
+
+/* NAVBAR (As seen in your design system) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logo-dot {
+    width: 16px;
+    height: 16px;
+    background: #87d4d8; /* Contact theme button color */
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 400;
+    color: #666;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #87d4d8; /* Highlights with the contact accent color */
+}
+
+.nav-separator {
+    color: #ccc;
+}
+
+/* MAIN CONTACT CONTAINER */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: start;
+}
+
+/* LEFT COLUMN: TEXT INFO */
+.contact-info h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+.contact-subtext {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.info-group {
+    margin-bottom: 35px;
+}
+
+.info-group h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.info-group p {
+    font-size: 15px;
+    color: #444;
+}
+
+.info-group a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-group a:hover {
+    color: #008080;
+}
+
+/* RIGHT COLUMN: CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bbb;
+    background: transparent;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #000;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* SUBMIT BUTTON WITH CONTACT THEME ACCENT */
+.submit-btn {
+    background: #87d4d8; /* Uses the specific light blue/teal accent button hex code */
+    color: #000;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    align-self: start;
+    min-width: 180px;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background: #73c2c6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE LAYOUT */
+@media(max-width: 900px){
+    body {
+        padding: 40px 30px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .contact-info h1 {
+        font-size: 46px;
+    }
+    
+    .submit-btn {
+        width: 100%; /* Spans full screen on mobile interfaces */
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <div class="logo-dot"></div>
+        Devadath C <span>Portfolio</span>
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <span class="nav-separator">|</span>
+        <a href="resume.html">Resume</a>
+        <span class="nav-separator">|</span>
+        <a href="project.html">Projects</a>
+        <span class="nav-separator">|</span>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<main class="contact-container">
+    
+    <!-- LEFT SIDE: CONNECT CHANNELS -->
+    <div class="contact-info">
+        <h1>Contact</h1>
+        <p class="contact-subtext">Looking forward to hearing from you</p>
+        
+        <div class="info-group">
+            <h4>Phone</h4>
+            <p><a href="tel:+918943911535">+91 8943911535</a></p>
+        </div>
+
+        <div class="info-group">
+            <h4>Email</h4>
+            <p><a href="mailto:devudathux@gmail.com">devudathux@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: MESSAGE PIPELINE FORM -->
+    <form class="contact-form" action="mailto:devudathux@gmail.com" method="post" enctype="text/plain">
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="Last Name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Sender Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="6" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+        
+    </form>
+
+</main>
+
+</body>
+</html>
