@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Devadath C</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: #f1f1f1; /* Matching portfolio background */
+    color: #111;
+    min-height: 100vh;
+    padding: 40px 80px;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logo-dot {
+    width: 16px;
+    height: 16px;
+    background: #ff3b30; /* Uses your project button color as the brand dot */
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 400;
+    color: #666;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff3b30;
+}
+
+.nav-separator {
+    color: #ccc;
+}
+
+/* MAIN CONTAINER */
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+}
+
+/* ASYMMETRICAL PROJECT LAYOUT ROW */
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project-details {
+    max-width: 480px;
+}
+
+.project-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.tag-hardware { background: #ffebeb; color: #ff3b30; }
+.tag-software { background: #e6f7f8; color: #008080; }
+.tag-ongoing { background: #fff7e6; color: #d48800; }
+
+.project-details h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.project-details p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* UPGRADED IMAGE CONTAINER FRAME */
+.project-image-frame {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    background: #e4e4e4;
+    transition: transform 0.4s ease;
+}
+
+.project-image-frame:hover {
+    transform: scale(1.015);
+}
+
+.project-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 900px){
+    body {
+        padding: 40px 30px;
+    }
+    
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+    
+    .project-details {
+        max-width: 100%;
+    }
+    
+    .project-image-frame {
+        height: 250px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <div class="logo-dot"></div>
+        Devadath C <span>Portfolio</span>
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <span class="nav-separator">|</span>
+        <a href="resume.html">Resume</a>
+        <span class="nav-separator">|</span>
+        <a href="project.html" class="active">Projects</a>
+        <span class="nav-separator">|</span>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="projects-container">
+    
+    <h1 class="page-title">Projects</h1>
+
+    <!-- PROJECT 1 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-hardware">Hardware Innovation</span>
+            <h2>Airmatrix</h2>
+            <p>A custom engineering hardware project designed to audit wireless infrastructure footprint boundaries. It functions efficiently as a tactical Wi-Fi and Bluetooth deauthentication platform, mapping out defense verification vectors against signaling jamming mechanics.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="airmatrix.jpeg" alt="Airmatrix Hardware Project">
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-software">Network Security</span>
+            <h2>MNIDS</h2>
+            <p>A Mini Intrusion Detection System structured to flag unusual behavior profiles across system network pipelines. This framework processes inbound packets dynamically to protect core node infrastructure from unexpected anomalies.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="mnids.jpeg" alt="MNIDS System Interface">
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-software">Security Framework</span>
+            <h2>Zerolock Security Framework</h2>
+            <p>A dedicated defensive infrastructure paradigm adhering strictly to zero-trust principles. It isolates critical data endpoints while ensuring strict continuous identity authentication mechanics are verified system-wide.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="zerolock.jpeg" alt="Zerolock Architecture Blueprint">
+        </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-software">Web Security</span>
+            <h2>SQL Injection Payload Detector</h2>
+            <p>An algorithmic analysis utility designed to look closely at web requests for common database attack strings. It isolates malicious inputs before data management software layers parse dangerous payloads.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="sqli.jpeg" alt="SQL Injection Prevention Analysis">
+        </div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-software">Behavioral Analytics</span>
+            <h2>Cipher Behave</h2>
+            <p>An advanced activity auditing engine that actively monitors, collects, and analyzes user interactions across system nodes. By building normal operations baselines, it catches internal security threats or credential abuse through live behavior pattern shifts.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="cipher_behave.jpeg" alt="Cipher Behave Behavioral Monitoring Dashboard">
+        </div>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-software">Completed Project</span>
+            <h2>Marauder Tool</h2>
+            <p>A completed specialized hardware research project engineered to handle tactical RF, radio spectrum, and physical infrastructure signal evaluation metrics.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="marauder.jpeg" alt="Marauder Radio Frequency Research Asset">
+        </div>
+    </div>
+
+    <!-- PROJECT 7 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-ongoing">Ongoing Project</span>
+            <h2>MARK 42 CTF Challenge</h2>
+            <p>An ongoing cybersecurity Capture The Flag challenge project focused on designing practical, scenario-based challenges that combine web security, exploitation, digital forensics, OSINT, reverse engineering, steganography, and cryptography.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="mark42.jpeg" alt="MARK 42 CTF Challenge">
+        </div>
+    </div>
+
+    <!-- PROJECT 8 -->
+    <div class="project-row">
+        <div class="project-details">
+            <span class="project-tag tag-ongoing">Ongoing Project</span>
+            <h2>Jarvis Attack Machine</h2>
+            <p>An ongoing Ubuntu 14.04-based vulnerable attack machine developed as part of the MARK 42 CTF. The machine is designed around log analysis, defensive investigation, service enumeration, and practical exploitation paths for CTF participants.</p>
+        </div>
+        <div class="project-image-frame">
+            <img src="jarvis.jpeg" alt="Jarvis Attack Machine">
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>
